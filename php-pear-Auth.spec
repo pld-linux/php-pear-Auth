@@ -3,8 +3,8 @@
 %define		_status		stable
 %define		_pearname	%{_class}
 
-Summary:	%{_pearname} - php pear authentication class
-Summary(pl):	%{_pearname} - klasa dla php pear z klasami uwierzytelniaj±cymi
+Summary:	%{_pearname} - PHP PEAR authentication class
+Summary(pl):	%{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.2.3
 Release:	1
