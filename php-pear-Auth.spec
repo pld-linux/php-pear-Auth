@@ -5,7 +5,7 @@ Summary:	%{_class} - php pear authentication class
 Summary(pl):	%{_class} - klasa dla php pear z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
-Release:	3
+Release:	4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -31,9 +31,10 @@ uwierzytelniania u¿ywaj±cego PHP.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
 
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}
-install %{_pearname}-%{version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,5 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/README*
-%{php_pear_dir}/*.php
 %{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/%{_class}/Container/*.php
