@@ -1,7 +1,8 @@
 %include	/usr/lib/rpm/macros.php
-%define		_pearname	Auth
-Summary:	Auth - php pear authentication class
-Summary(pl):	Auth - klasa dla php pear z klasami autentyfikuj±cymi
+%define		_class		Auth
+%define		_pearname	%{_class}
+Summary:	%{_class} - php pear authentication class
+Summary(pl):	%{_class} - klasa dla php pear z klasami autentyfikuj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	1
@@ -28,10 +29,10 @@ autentyfikacji u¿ywaj±cego PHP.
 rm -rf $RPM_BUILD_ROOT
 cd %{_pearname}-%{version}
 
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_pearname}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 install *.php			$RPM_BUILD_ROOT%{php_pear_dir}
-install Container/*.php		$RPM_BUILD_ROOT%{php_pear_dir}/%{_pearname}
+install Container/*.php		$RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/README*
-%dir %{php_pear_dir}/%{_pearname}
+%dir %{php_pear_dir}/%{_class}
 %{php_pear_dir}/*.php
-%{php_pear_dir}/%{_pearname}/*.php
+%{php_pear_dir}/%{_class}/*.php
