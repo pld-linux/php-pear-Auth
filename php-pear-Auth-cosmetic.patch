@@ -1,0 +1,16 @@
+--- ./Auth-1.0.1/Container/LDAP.php.org	Fri Dec 14 16:58:26 2001
++++ ./Auth-1.0.1/Container/LDAP.php	Fri Jul 12 17:06:00 2002
+@@ -88,11 +88,11 @@
+                 $this->_connect();
+                 return true;
+             } else {
+-                return new Pear_Error("No LDAP Search Base specified!", 41, PEAR_ERROR_DIE);
++                return new PEAR_Error("No LDAP Search Base specified!", 41, PEAR_ERROR_DIE);
+             }        
+         }
+ 
+-        return new Pear_Error("No parameters specified", 41, PEAR_ERROR_DIE);
++        return new PEAR_Error("No parameters specified", 41, PEAR_ERROR_DIE);
+     }
+ 
+     // }}}
