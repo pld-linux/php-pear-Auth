@@ -2,15 +2,16 @@
 %define		_class		Auth
 %define		_status		stable
 %define		_pearname	%{_class}
+
 Summary:	%{_pearname} - php pear authentication class
 Summary(pl):	%{_pearname} - klasa dla php pear z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
-Version:	1.2.2
+Version:	1.2.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	6f8b343bf0ee9aef1bb063c9600898f8
+# Source0-md5:	1506c2a27afe85e8d56eaa8466b6f13a
 URL:		http://pear.php.net/package/Auth/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -34,9 +35,10 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{Auth,Container}
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/Auth/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Auth
 install %{_pearname}-%{version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
 
 %clean
@@ -46,6 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/{README*,tests}
 %dir %{php_pear_dir}/%{_class}
+%dir %{php_pear_dir}/%{_class}/Auth
 %dir %{php_pear_dir}/%{_class}/Container
 %{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/%{_class}/Auth/*.php
 %{php_pear_dir}/%{_class}/Container/*.php
