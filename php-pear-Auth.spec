@@ -1,11 +1,13 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Auth
+%define		_status		stable
+
 %define		_pearname	%{_class}
 Summary:	%{_pearname} - php pear authentication class
 Summary(pl):	%{_pearname} - klasa dla php pear z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.1.1
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -19,9 +21,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The PEAR::Auth package provides methods for creating an authentication
 system using PHP.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Pakiet PEAR::Auth dostarcza metody do stworzenia systemu
 uwierzytelniania u¿ywaj±cego PHP.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
@@ -39,5 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/README*
+%dir %{php_pear_dir}/%{_class}
+%dir %{php_pear_dir}/%{_class}/Container
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/Container/*.php
