@@ -2,7 +2,7 @@
 %define		_class		Auth
 %define		_pearname	%{_class}
 Summary:	%{_class} - php pear authentication class
-Summary(pl):	%{_class} - klasa dla php pear z klasami autentyfikuj±cymi
+Summary(pl):	%{_class} - klasa dla php pear z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	1
@@ -20,7 +20,7 @@ system using PHP.
 
 %description -l pl
 Pakiet PEAR::Auth dostarcza metody do stworzenia systemu
-autentyfikacji u¿ywaj±cego PHP.
+uwierzytelniania u¿ywaj±cego PHP.
 
 %prep
 %setup -q -c
