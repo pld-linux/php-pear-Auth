@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Auth
 %define		_pearname	%{_class}
-Summary:	%{_class} - php pear authentication class
-Summary(pl):	%{_class} - klasa dla php pear z klasami uwierzytelniaj±cymi
+Summary:	%{_pearname} - php pear authentication class
+Summary(pl):	%{_pearname} - klasa dla php pear z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	4
@@ -30,7 +30,6 @@ uwierzytelniania u¿ywaj±cego PHP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
