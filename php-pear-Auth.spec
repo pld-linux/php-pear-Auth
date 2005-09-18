@@ -75,6 +75,6 @@ pear/Auth can optionally use package "pear/File_SMBPasswd"
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/Container/*.php
 
-%files  tests
+%files tests
 %defattr(644,root,root,755)
 %{php_pear_dir}/tests/*
