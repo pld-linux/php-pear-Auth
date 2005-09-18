@@ -51,22 +51,19 @@ cd ./%{php_pear_dir}/%{_class}
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
-cp -a ./%{php_pear_dir}/{.registry,*} $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
-echo 'pear/Auth can optionally use package "pear/File_Passwd" (version >= 0.9.5)
-pear/Auth can optionally use package "pear/Net_POP3" (version >= 1.3)
-pear/Auth can optionally use package "pear/DB"
-pear/Auth can optionally use package "pear/MDB"
-pear/Auth can optionally use package "pear/Auth_RADIUS"
-pear/Auth can optionally use package "pear/File_SMBPasswd"
-'
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
 
 %files
 %defattr(644,root,root,755)
+%doc install.log optional-packages.txt
 %doc docs/%{_pearname}/README*
 %{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/%{_class}
