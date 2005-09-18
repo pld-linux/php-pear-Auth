@@ -21,6 +21,9 @@ Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# optional
+%define		_noautoreq	'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)'
+
 %description
 The PEAR::Auth package provides methods for creating an authentication
 system using PHP.
