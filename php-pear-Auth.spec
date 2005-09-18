@@ -1,4 +1,5 @@
 %include	/usr/lib/rpm/macros.php
+%include	/usr/lib/rpm/macros.pear
 %define		_class		Auth
 %define		_status		stable
 %define		_pearname	%{_class}
@@ -7,16 +8,14 @@ Summary:	%{_pearname} - PHP PEAR authentication class
 Summary(pl):	%{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
 Version:	1.2.3
-Release:	3.1
+Release:	3.2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	1506c2a27afe85e8d56eaa8466b6f13a
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/Auth/
-BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1.3
-BuildRequires:	php-zlib
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	php-pear-build
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -68,7 +67,7 @@ pear/Auth can optionally use package "pear/File_SMBPasswd"
 
 %files
 %defattr(644,root,root,755)
-%doc doc/%{_pearname}/README*
+%doc docs/%{_pearname}/README*
 %{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/%{_class}
 %dir %{php_pear_dir}/%{_class}/Container
