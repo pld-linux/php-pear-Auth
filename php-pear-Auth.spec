@@ -14,7 +14,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	1506c2a27afe85e8d56eaa8466b6f13a
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/Auth/
-BuildRequires:	rpm-php-pearprov >= 4.4.2-10.2
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
