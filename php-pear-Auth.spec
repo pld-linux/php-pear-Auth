@@ -1,3 +1,5 @@
+# TODO
+# - http://pear.php.net/bugs/bug.php?id=4371
 %include	/usr/lib/rpm/macros.php
 %define		_class		Auth
 %define		_status		stable
