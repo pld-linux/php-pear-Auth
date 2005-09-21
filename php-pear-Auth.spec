@@ -17,12 +17,14 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/Auth/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-Requires:	php-pear
+Requires:	php-pear >= 4:1.0-8
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # optional
-%define		_noautoreq	'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)'
+%define		_noautoreq 'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)'
+# tests
+# 'pear(DBContainer.php) 'pear(FileContainer.php) 'pear(IMAPContainer.php) 'pear(MDBContainer.php) 'pear(POP3Container.php) 'pear(POP3aContainer.php) 'pear(TestAuthContainer.php)'
 
 %description
 The PEAR::Auth package provides methods for creating an authentication
@@ -39,6 +41,7 @@ Ta klasa ma w PEAR status: %{_status}.
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
 Group:		Development
+Autoreq:	no
 Requires:	%{name} = %{version}-%{release}
 
 %description tests
@@ -67,7 +70,6 @@ fi
 %doc install.log optional-packages.txt
 %doc docs/%{_pearname}/README*
 %{php_pear_dir}/.registry/*.reg
-%dir %{php_pear_dir}/%{_class}
 %dir %{php_pear_dir}/%{_class}/Container
 %{php_pear_dir}/*.php
 %{php_pear_dir}/%{_class}/*.php
