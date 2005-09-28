@@ -22,7 +22,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # optional
-%define		_noautoreq 'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)'
+%define		_noautoreq	'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)'
 # tests
 # 'pear(DBContainer.php) 'pear(FileContainer.php) 'pear(IMAPContainer.php) 'pear(MDBContainer.php) 'pear(POP3Container.php) 'pear(POP3aContainer.php) 'pear(TestAuthContainer.php)'
 
