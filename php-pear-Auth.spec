@@ -43,8 +43,8 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl):	Testy dla PEAR::%{_pearname}
 Group:		Development
-Autoreq:	no
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
