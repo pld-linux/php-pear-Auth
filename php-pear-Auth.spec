@@ -5,13 +5,13 @@
 Summary:	%{_pearname} - PHP PEAR authentication class
 Summary(pl):	%{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
-Version:	1.3.2
+Version:	1.4.2
 Release:	1
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	d5c4ca6495044a7ecee34838163f9ffa
+# Source0-md5:	6c32dd03db8fade31087abcc8c2fe417
 URL:		http://pear.php.net/package/Auth/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -21,7 +21,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # optional
-%define		_noautoreq	'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)' 'pear(DB.*)' 'pear(MDB.*)' 'pear(MDB2.*)' 'pear(Crypt/CHAP.*)'
+%define		_noautoreq	'pear(Auth/RADIUS.php)' 'pear(File/Passwd.php)' 'pear(File/SMBPasswd.php)' 'pear(Net/POP3.php)' 'pear(DB.*)' 'pear(MDB.*)' 'pear(MDB2.*)' 'pear(Crypt/CHAP.*)' 'pear(SOAP.*)'
 
 %description
 The PEAR::Auth package provides methods for creating an authentication
