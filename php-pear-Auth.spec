@@ -5,13 +5,13 @@
 Summary:	%{_pearname} - PHP PEAR authentication class
 Summary(pl):	%{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniaj±cymi
 Name:		php-pear-%{_pearname}
-Version:	1.4.2
+Version:	1.4.3
 Release:	1
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	6c32dd03db8fade31087abcc8c2fe417
+# Source0-md5:	0dde3a83226fcc941518b77af895a4ab
 URL:		http://pear.php.net/package/Auth/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
