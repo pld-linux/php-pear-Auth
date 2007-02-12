@@ -3,7 +3,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}
 Summary:	%{_pearname} - PHP PEAR authentication class
-Summary(pl):	%{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniaj±cymi
+Summary(pl.UTF-8):   %{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniajÄ…cymi
 Name:		php-pear-%{_pearname}
 Version:	1.4.3
 Release:	1
@@ -29,15 +29,15 @@ system using PHP.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Pakiet PEAR::Auth dostarcza metody do stworzenia systemu
-uwierzytelniania u¿ywaj±cego PHP.
+uwierzytelniania uÅ¼ywajÄ…cego PHP.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -46,7 +46,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
