@@ -1,6 +1,6 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		stable
 %define		_pearname	Auth
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - PHP PEAR authentication class
 Summary(pl.UTF-8):	%{_pearname} - klasa dla PHP PEAR z klasami uwierzytelniającymi
 Name:		php-pear-%{_pearname}
@@ -78,3 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/Auth/*.php
 %{php_pear_dir}/Auth/Container
 %{php_pear_dir}/Auth/Frontend
+%{php_pear_dir}/data/%{_pearname}
