@@ -16,7 +16,10 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.571
 Requires:	php-pear >= 4:1.0-8
-Suggests:	php-imap
+Suggests:	php(imap)
+Suggests:	php(kadm5)
+Suggests:	php(soap)
+Suggests:	php(vpopmail)
 Suggests:	php-pear-Auth_RADIUS
 Suggests:	php-pear-Crypt_CHAP
 Suggests:	php-pear-DB
@@ -29,10 +32,7 @@ Suggests:	php-pear-MDB2
 Suggests:	php-pear-Net_POP3
 Suggests:	php-pear-Net_Vpopmaild
 Suggests:	php-pear-SOAP
-Suggests:	php-pecl-kadm5
-Suggests:	php-pecl-vpopmail
 Suggests:	php-saprfc
-Suggests:	php-soap
 Obsoletes:	php-pear-Auth-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
